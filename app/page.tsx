@@ -75,6 +75,9 @@ function Home() {
         <button  onClick={handleFocus}>Click to focus input</button>
         <input ref={inputRef} type="text" placeholder="Enter your name" onChange={handleInputChange} />
        </div>
+       <div>
+         <p>Income: {income}</p>
+       </div>
     </div>
   );
 }
