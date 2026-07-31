@@ -4,18 +4,29 @@ import Header from "./components/Header";
 import Desc from "./components/Description";
 import styles from "./home.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 function Home() {
   let hideDescription = true;
-   const [counter, setCounter] = useState<number>(0);
+   const [counter, setCounter] = useState<number>(0 );
+   const [success, setSuccess] = useState<boolean>(false);
    
    const handleClick = () => {
      setCounter(counter + 1);
-     console.log("Counter incremented to:", counter);
+     if(counter  === 10){
+      setSuccess(true);
+     }
    }
+
+   useEffect(() => {
+    console.log("event is successful");
+  }, [success]);
+
+   useEffect(() => {
+    console.log("Counter is triggered");
+  }, [counter]);
 
 
 
