@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 
- function Header(){
+ function Header(props: { text: string }){
   return (
-    <div>header</div>
+    <div>{props.text}</div>
   )
 }
  function Desc(){
@@ -25,7 +25,7 @@ function List(){
     <div >
       <main >
         <p>Hello, world from belal</p>
-        <Header/>
+        <Header text="Welcome from main"/>
         <Desc/>
       </main>
     </div>
