@@ -2,7 +2,6 @@
 
 import Header from "./components/Header";
 import Desc from "./components/Description";
-import styles from "./home.module.css";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -59,7 +58,7 @@ function Home() {
     <div >
       <main style={{ color: "red" , backgroundColor: "green " }}>
         <p className="section">Hello, world from belal</p>
-        <Header text="An amazing header " textSubtitle="This is a subtitle" className={styles.border}/>
+        <Header text="An amazing header " textSubtitle="This is a subtitle" />
        {hideDescription && <Desc  />}
        <Link href="/about">Go To About Page</Link>
       </main>
