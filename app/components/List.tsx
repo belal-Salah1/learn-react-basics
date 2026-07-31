@@ -1,9 +1,14 @@
 type ListParams = {
   description: string;
 };
-function List(props: ListParams){
+
+function List(props: ListParams) {
   return (
-    <div>list of details: {props.description}</div>
-  )
+    <li className="px-4 py-3 text-sm">
+      <span className="text-muted">detail: </span>
+      {props.description}
+    </li>
+  );
 }
+
 export default List;
