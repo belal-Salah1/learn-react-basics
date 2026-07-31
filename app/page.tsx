@@ -20,6 +20,9 @@ function Home() {
       setSuccess(true);
      }
    }
+   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("Input value changed:", event.target.value);
+  }
 
    const handleFocus = () => {
     if (inputRef.current) {
@@ -55,8 +58,8 @@ function Home() {
        </div>
 
        <div>
-        <button onClick={handleFocus}>Click to focus input</button>
-        <input ref={inputRef} type="text" placeholder="Enter your name" />
+        <button  onClick={handleFocus}>Click to focus input</button>
+        <input ref={inputRef} type="text" placeholder="Enter your name" onChange={handleInputChange} />
        </div>
     </div>
   );
