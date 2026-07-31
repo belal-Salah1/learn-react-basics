@@ -1,7 +1,11 @@
 import Image from "next/image";
 
+  type HeaderParams = {
+    text: string;
+  };
 
- function Header(props: { text: string }){
+
+ function Header(props: HeaderParams){
   return (
     <div>{props.text}</div>
   )
@@ -10,13 +14,17 @@ import Image from "next/image";
   return (
     <>
     <div>desc</div>
-    <List/>
+    <List description="This is a sample description"/>
     </>
   )
 }
-function List(){
+
+type ListParams = {
+  description: string;
+};
+function List(props: ListParams){
   return (
-    <div>list of details</div>
+    <div>list of details: {props.description}</div>
   )
 }
 
