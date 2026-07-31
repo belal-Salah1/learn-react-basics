@@ -8,12 +8,13 @@ import Desc from "./components/Description";
 
 
  function Home() {
+  let hideDescription = true;
   return (
     <div >
       <main >
         <p>Hello, world from belal</p>
         <Header text="An amazing header " textSubtitle="This is a subtitle"/>
-        <Desc/>
+       {hideDescription && <Desc  />}
       </main>
     </div>
   );
