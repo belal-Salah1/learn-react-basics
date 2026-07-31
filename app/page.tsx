@@ -12,7 +12,7 @@ import Desc from "./components/Description";
     <div >
       <main >
         <p>Hello, world from belal</p>
-        <Header text="Welcome from main"/>
+        <Header text="An amazing header " textSubtitle="This is a subtitle"/>
         <Desc/>
       </main>
     </div>
