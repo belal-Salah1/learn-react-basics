@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Desc from "./components/Description";
 import styles from "./home.module.css";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 
 
@@ -13,11 +13,24 @@ function Home() {
    const [counter, setCounter] = useState<number>(0 );
    const [success, setSuccess] = useState<boolean>(false);
    const inputRef = useRef<HTMLInputElement>(null);
-   
+   const [shouldCalculate, setShouldCalculate] = useState<boolean>(false);
+
+   const CalculateIncome = () =>{
+    let number = 10;
+    for(let i = 0; i < 10000; i++){
+      number += i;
+    }
+    console.log("Calculation....");
+    return number;
+   }
+
+   const income = useMemo(() => CalculateIncome(), [shouldCalculate]);
+
    const handleClick = () => {
      setCounter(counter + 1);
      if(counter  === 10){
       setSuccess(true);
+      setShouldCalculate(true);
      }
    }
    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,6 +43,7 @@ function Home() {
     }
     console.log("Input is focused", inputRef.current?.value);
    }
+
    useEffect(() => {
     console.log("event is successful");
   }, [success]);
