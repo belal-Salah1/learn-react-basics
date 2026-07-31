@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Header from "./components/Header";
 import Desc from "./components/Description";
+import styles from "./home.module.css";
 
 
 
@@ -11,9 +11,9 @@ import Desc from "./components/Description";
   let hideDescription = true;
   return (
     <div >
-      <main >
-        <p>Hello, world from belal</p>
-        <Header text="An amazing header " textSubtitle="This is a subtitle"/>
+      <main style={{ color: "red" , backgroundColor: "green " }}>
+        <p className="section">Hello, world from belal</p>
+        <Header text="An amazing header " textSubtitle="This is a subtitle" className={styles.border}/>
        {hideDescription && <Desc  />}
       </main>
     </div>

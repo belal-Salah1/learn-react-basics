@@ -1,12 +1,13 @@
   type HeaderParams = {
     text: string;
     textSubtitle: string;
+    className?: string;
   };
 
 
- function Header({ text, textSubtitle }: HeaderParams){
+ function Header({ text, textSubtitle, className }: HeaderParams){
   return (
-    <div>
+    <div className={className}>
       <h1>{text}</h1>
       <p>{textSubtitle}</p>
     </div>
