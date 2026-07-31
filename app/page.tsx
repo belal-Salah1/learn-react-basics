@@ -1,32 +1,11 @@
 import Image from "next/image";
-
-  type HeaderParams = {
-    text: string;
-  };
+import Header from "./components/Header";
+import Desc from "./components/Description";
 
 
- function Header(props: HeaderParams){
-  return (
-    <div>{props.text}</div>
-  )
-}
- function Desc(){
-  return (
-    <>
-    <div>desc</div>
-    <List description="This is a sample description"/>
-    </>
-  )
-}
 
-type ListParams = {
-  description: string;
-};
-function List(props: ListParams){
-  return (
-    <div>list of details: {props.description}</div>
-  )
-}
+
+
 
  function Home() {
   return (
